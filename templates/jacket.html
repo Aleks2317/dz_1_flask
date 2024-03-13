@@ -1,0 +1,23 @@
+{% extends 'base_2.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 class="col-12 text-monospace text-center">Обувь</h1>
+
+{% for card in data %}
+<div class="{{ card.name }}" style="width: 18rem;">
+    <img src="{{ card.img }}" class="card-img-top" alt="card.img">
+    <div class="{{ card.name }}-body">
+        <h5 class="{{ card.name }}-title">{{ card.name }}</h5>
+        <p class="{{ card.name }}-text">{{ card.title }}</p>
+        <p class="{{ card.name }}-text">Цвет: {{ card.color }}</p>
+        <p class="{{ card.name }}-text">Стоимость: {{ card.price }}</p>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

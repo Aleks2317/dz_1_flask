@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-monospace">Flask is cool!</h1>
+
+    <img src="/static/image/logo.png" alt="logo.png" width="300">
+    <p class="row">
+        {% for line in exercise %}
+            <span class="text-black-70 col-14 col-md-8">{{ line }}</span><br/>
+        {% endfor %}
+    </p>
+{% endblock %}

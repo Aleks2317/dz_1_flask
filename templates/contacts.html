@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-monospace">Contacts!</h1>
+    <img src="/static/image/contacts.png" alt="contacts.png" width="300">
+    <h1 class="col-12 text-monospace text-center">Контакты</h1>
+    {% for user in contacts %}
+        <div class="col-12 col-md-8 col-lg-4">
+            <h3>{{ user.name }}</h3>
+            <p>{{ user.mail }}</p>
+            <p>{{ user.phone }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
